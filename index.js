@@ -1,5 +1,5 @@
 function handleChecked() {
-    $(".shopping-item-toggle").click(function(event) {
+    $(".shopping-list").on('click', '.shopping-item-toggle', function(event) {
         let checkedItem = $(this).closest('li').find('span.shopping-item');
         $(checkedItem).toggleClass('shopping-item__checked');
     })
