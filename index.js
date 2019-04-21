@@ -7,6 +7,15 @@ function handleChecked() {
 
 $(handleChecked);
 
+function handleDeleted() {
+    $(".shopping-list").on('click', '.shopping-item-delete', function(event) {
+        let deleteItem = $(this).closest('li');
+        $(deleteItem).remove();
+    })
+};
+
+$(handleDeleted);
+
 
 function addListItem() {
     $('#js-shopping-list-form').submit(function(event){
